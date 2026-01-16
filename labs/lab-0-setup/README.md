@@ -148,7 +148,7 @@ Debe salir algo como:
 
 Ahora crearemos una tabla simple `patient` y cargaremos 5 filas.
 
-7.1 Crear el archivo SQL
+### 7.1 Crear el archivo SQL
 
 En el repositorio, crea la carpeta sql/ (si no existe) y el archivo:
 
@@ -157,6 +157,7 @@ sql/001_init.sql
 
 Copia tal cual el siguiente contenido:
 
+```
 CREATE TABLE IF NOT EXISTS patient (
   patient_id SERIAL PRIMARY KEY,
   sex TEXT CHECK (sex IN ('M','F','O')),
@@ -165,6 +166,7 @@ CREATE TABLE IF NOT EXISTS patient (
   has_chronic_condition BOOLEAN,
   created_at TIMESTAMP DEFAULT now()
 );
+```
 
 INSERT INTO patient (sex, birth_date, city, has_chronic_condition) VALUES
 ('F', '1990-05-12', 'Guatemala', true),
@@ -174,9 +176,6 @@ INSERT INTO patient (sex, birth_date, city, has_chronic_condition) VALUES
 ('M', '1998-09-30', 'Escuintla', false);
 
 > Esta tabla representa un ejemplo simplificado de pacientes: sexo, fecha de nacimiento, ciudad y si tienen una condición crónica.
-
-
-
 
 ---
 
@@ -313,10 +312,10 @@ Ciudades con el número de pacientes en cada una
 
 ---
 
-## 11) Entrega (Pull Request) — se hace AL FINAL (cuando todos tengan setup)
+## 10) Entrega (Pull Request) — se hace AL FINAL (cuando todos tengan setup)
 
 
-### 11.1 Crear rama del laboratorio
+### 10.1 Crear rama del laboratorio
 
 (El nombre exacto lo dirá el docente; ejemplo:)
 
@@ -326,7 +325,7 @@ git pull
 git checkout -b lab00-setup/grupo-XX
 ```
 
-### 11.2 Guardar cambios (commit)
+### 10.2 Guardar cambios (commit)
 
 ```powershell
 git status

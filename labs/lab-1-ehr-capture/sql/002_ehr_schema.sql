@@ -1,3 +1,10 @@
+-- BORRAR TABLAS (Para limpiar errores previos)
+DROP TABLE IF EXISTS labevents;
+DROP TABLE IF EXISTS d_labitems;
+DROP TABLE IF EXISTS diagnoses;
+DROP TABLE IF EXISTS admissions;
+DROP TABLE IF EXISTS patients;
+
 -- Patients: identidad longitudinal
 CREATE TABLE IF NOT EXISTS patients (
   subject_id SERIAL PRIMARY KEY,
